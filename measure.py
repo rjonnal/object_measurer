@@ -1,6 +1,12 @@
 import os,sys
 import numpy as np
-from scipy.misc import imread
+try:
+    from scipy.misc import imread
+except ImportError as ie:
+    print ie
+    from scipy import ndimage
+    imread = ndimage.imread
+
 from matplotlib import pyplot as plt
 import h5py
 
