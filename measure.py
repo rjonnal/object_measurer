@@ -112,8 +112,8 @@ def onclick(event):
 
 cid = fig.canvas.mpl_connect('button_press_event', onclick)
 
-
 ax.imshow(im)
+plt.title('shift-click ends of scalebar, then enter length; click/ctrl-click object edges after')
 plt.show()
 
 print h5['scalebar'].keys()
